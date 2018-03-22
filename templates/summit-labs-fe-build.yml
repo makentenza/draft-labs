@@ -30,8 +30,8 @@ objects:
     strategy:
       dockerStrategy:
         dockerfilePath: Dockerfile
-  status:
-    lastVersion: 1
+    triggers:
+    - type: ConfigChange
 - apiVersion: v1
   kind: ImageStream
   metadata:

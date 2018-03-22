@@ -117,8 +117,11 @@ objects:
       app: "${NAME}"
     name: "${NAME}"
   spec:
+    path: /nexus
     port:
       targetPort: 8081
+    tls:
+      termination: edge
     to:
       kind: Service
       name: "${NAME}"
