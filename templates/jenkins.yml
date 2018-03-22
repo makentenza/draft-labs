@@ -96,9 +96,6 @@ objects:
               port: 8080
             initialDelaySeconds: 3
             timeoutSeconds: 3
-          resources:
-            limits:
-              memory: ${MEMORY_LIMIT}
           securityContext:
             capabilities: {}
             privileged: false
@@ -193,10 +190,6 @@ parameters:
   displayName: Jenkins JVM Architecture
   name: JVM_ARCH
   value: i386
-- description: Maximum amount of memory the container can use.
-  displayName: Memory Limit
-  name: MEMORY_LIMIT
-  value: 512Mi
 - description: Container Group opts
   displayName: Container Group opts
   name: JAVA_GC_OPTS
