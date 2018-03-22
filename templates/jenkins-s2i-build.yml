@@ -19,8 +19,6 @@ objects:
     source:
       contextDir: "${SOURCE_CONTEXT_DIR}"
       type: Git
-      sourceSecret:
-        name: gitlab-auth
       git:
         uri: "${SOURCE_REPOSITORY_URL}"
         ref: "${SOURCE_REPOSITORY_REF}"
