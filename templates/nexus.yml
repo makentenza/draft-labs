@@ -79,8 +79,7 @@ objects:
           privileged: false
         terminationGracePeriodSeconds: 30
         volumes:
-        - persistentVolumeClaim:
-            claimName: "${NAME}"
+        - emptyDir: {}
           name: "${NAME}"
     test: false
     triggers:

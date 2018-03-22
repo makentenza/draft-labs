@@ -94,9 +94,8 @@ objects:
         restartPolicy: Always
         serviceAccountName: ${JENKINS_SERVICE_NAME}
         volumes:
-        - name: ${JENKINS_SERVICE_NAME}-data
-          persistentVolumeClaim:
-            claimName: ${JENKINS_SERVICE_NAME}
+        - emptyDir: {}
+          name: ${JENKINS_SERVICE_NAME}-data
     triggers:
     - imageChangeParams:
         automatic: true
