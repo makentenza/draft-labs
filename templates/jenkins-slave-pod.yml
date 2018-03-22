@@ -35,6 +35,8 @@ objects:
           kind: DockerImage
           name: "${BUILDER_IMAGE_NAME}"
       type: Docker
+    triggers:
+    - type: ConfigChange
 - apiVersion: v1
   kind: ImageStream
   metadata:

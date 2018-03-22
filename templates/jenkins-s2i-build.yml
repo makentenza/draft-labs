@@ -34,6 +34,8 @@ objects:
       to:
         kind: ImageStreamTag
         name: "${NAME}:latest"
+    triggers:
+    - type: ConfigChange
 - kind: ImageStream
   apiVersion: v1
   metadata:
