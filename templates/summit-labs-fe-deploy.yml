@@ -78,7 +78,7 @@ objects:
     selector:
       name: "${NAME}"
     sessionAffinity: None
-    type: ClusterIP
+    type: ClusterIP        
 - apiVersion: v1
   kind: Route
   metadata:
@@ -88,6 +88,8 @@ objects:
   spec:
     port:
       targetPort: 8080-tcp
+    tls:
+      termination: edge
     to:
       kind: Service
       name: "${NAME}"
