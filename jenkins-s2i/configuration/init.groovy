@@ -5,6 +5,8 @@ import com.cloudbees.plugins.credentials.common.*
 import com.cloudbees.plugins.credentials.domains.*
 import com.cloudbees.plugins.credentials.impl.*
 import com.cloudbees.jenkins.plugins.sshcredentials.impl.*
+import javaposse.jobdsl.plugin.GlobalJobDslSecurityConfiguration
+import jenkins.model.GlobalConfiguration
 import hudson.plugins.sshslaves.*;
 
 domain = Domain.global()
@@ -21,3 +23,6 @@ usernameAndPassword = new UsernamePasswordCredentialsImpl(
 
 store.addCredentials(domain, usernameAndPassword)
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+
+GlobalConfiguration.all().get(GlobalJobDslSecurityConfiguration.class).useScriptSecurity=false
+GlobalConfiguration.all().get(GlobalJobDslSecurityConfiguration.class).save()
