@@ -36,9 +36,9 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <org.jenkinsci.plugins.p4.trigger.P4Trigger plugin="p4@1.3.8">
-      <spec/>
-    </org.jenkinsci.plugins.p4.trigger.P4Trigger>
+  <hudson.triggers.TimerTrigger>
+    <spec>*/1 * * * *</spec>
+  </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
