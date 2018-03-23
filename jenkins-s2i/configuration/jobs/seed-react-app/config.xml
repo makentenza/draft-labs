@@ -35,7 +35,11 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <org.jenkinsci.plugins.p4.trigger.P4Trigger plugin="p4@1.3.8">
+      <spec/>
+    </org.jenkinsci.plugins.p4.trigger.P4Trigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <javaposse.jobdsl.plugin.ExecuteDslScripts plugin="job-dsl@1.66">
