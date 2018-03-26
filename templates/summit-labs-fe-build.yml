@@ -16,6 +16,7 @@ objects:
       build: "${NAME}"
     name: "${NAME}"
   spec:
+    completionDeadlineSeconds: 1200
     nodeSelector:
     output:
       to:
